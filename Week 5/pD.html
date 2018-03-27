@@ -10,6 +10,16 @@
     th, td {
       text-align: center;
     }
+
+    #printOnly {
+
+    }
+
+    @media print {
+      #printOnly {
+        display : block;
+      }
+    }
     </style>
 
     <style media="screen" type="text/css">
@@ -26,7 +36,7 @@
       width:300px;
       height:21px;
       background-color: black;
-      align-content: center;
+      align-self: center;
       position:absolute;
     }
     </style>
@@ -86,21 +96,7 @@
        <img id="popupImage" alt="" />
     </div></p>
 
-
-  <script type="text/javascript">
-   function ShowImage(src)
-   {
-       var img = document.getElementById('popupImage');
-       var div = document.getElementById('popup');
-       img.src = src;
-       div.style.display = "block";
-   }
-   function HideImage()
-   {
-       document.getElementById('popup').style.display = "none";
-   }
-   </script>
-
+  <p id="printOnly" onload="addInfo('printOnly')"><p>
   <script src="myFuncs.js"></script>
 </body>
 </html>

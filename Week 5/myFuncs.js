@@ -32,7 +32,7 @@ function sortList(listId) {
   }
 }
 
-function addInfo() {
+function addInfo(id) {
   document.write("<p>URL: " + document.URL + "</p>");
   document.write("<p>Date: " + Date() + "</p>");
 
@@ -52,4 +52,17 @@ function removeTableRatings(id) {
       }
     }
   }
+}
+
+function ShowImage(src)
+{
+    var img = document.getElementById('popupImage');
+    var div = document.getElementById('popup');
+    img.src = src;
+    div.style.display = "block";
+}
+
+function HideImage()
+{
+    document.getElementById('popup').style.display = "none";
 }
