@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample JS Page</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: center;
+    }
+    </style>
+
+    <style media="screen" type="text/css">
+    .pop-up {
+      height: 100px;
+      width: 100px;
+      margin-right: -100;
+      margin-top: -100px;
+      position: absolute;
+      right: 57.5vw;
+      bottom: 90px;
+    }
+    .button {
+      width:300px;
+      height:21px;
+      background-color: black;
+      align-content: center;
+      position:absolute;
+    }
+    </style>
+</head>
+<body>
+  <h1 id="Welcome">Hello world!</h1>
+  <p>Here's a <a onclick="changeIt(); return false;" href="#">link with an onclick</a>.</p>
+  <p>Here's a <a onclick="sortList('fruits'); sortList('stuff'); return false;" href="#">link that sorts the fruit and jumble letters list</a>.</p>
+  <ul id="things">
+    <li>Thing 1</li>
+    <li>Thing 2</li>
+  </ul>
+  <ol>
+    <li>Thing 3</li>
+    <li>Thing 4</li>
+  </ol>
+  <ul id="fruits">
+    <li>Orange</li>
+    <li>Apple</li>
+    <li>Banana</li>
+  </ul>
+  <ul id="stuff">
+    <li>dfdsf</li>
+    <li>hdgfdg</li>
+    <li>dfsdgf</li>
+    <li>lkihj</li>
+    <li>oapsd</li>
+  </ul>
+  <table style="width: 100%" id="t">
+    <tr>
+      <th>Row Number</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+  </table>
+  <p style="text-align: center;"><a onclick="removeTableRatings('t'); return false" href="#">Remove Lower Ratings</a></p>
+  <p style="text-align: center;"><a onmouseover="addInfo(); return false;" href="#">Hover hover</a>
+  <p style="text-align: center;"><a onclick="addInfo(); return false;" href="#">Get info</a>
+  <p style="align-content: center;">    <a href="" class="button" onmouseover="javascript:ShowImage('vbHpWS.gif')" onmouseout="javascript:HideImage()"></a>
+
+    <div id="popup" class="pop-up">
+       <img id="popupImage" alt="" />
+    </div></p>
+
+
+  <script type="text/javascript">
+   function ShowImage(src)
+   {
+       var img = document.getElementById('popupImage');
+       var div = document.getElementById('popup');
+       img.src = src;
+       div.style.display = "block";
+   }
+   function HideImage()
+   {
+       document.getElementById('popup').style.display = "none";
+   }
+   </script>
+
+  <script src="myFuncs.js"></script>
+</body>
+</html>
